@@ -1,9 +1,5 @@
 const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com";
 
-console.log("TESTE GIT");
-
-
-
 const inputNome = document.querySelector('#nome');
 const inputBanner = document.querySelector('#banner');
 const inputAtracoes = document.querySelector('#atracoes');
@@ -17,17 +13,17 @@ const form = document.querySelector('.col-6');
 form.onsubmit = async (evento) => {
     evento.preventDefault();
     
-        // const dateTime = inputData.value;
-        // const [day, month, yearTime] = dateTime.split('/');
-        // let convertedDate = [month, day, yearTime].join('/');
-        // convertedDate = new Date(convertedDate).toISOString();
+        const dateTime = inputData.value;
+        const [day, month, yearTime] = dateTime.split('/');
+        let convertedDate = [month, day, yearTime].join('/');
+        convertedDate = new Date(convertedDate).toISOString();
 
     const newEvento = {
         name: inputNome.value,
         poster: inputBanner.value,
         attractions: inputAtracoes.value.split(','),
         description: inputDescricao.value,
-        scheduled: new Date(inputData.value).toISOString(),
+        scheduled: convertedDate,
         number_tickets: parseInt(inputLotacao.value)
     }
 
