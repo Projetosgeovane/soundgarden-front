@@ -29,9 +29,9 @@ if (arquivoHtml === 'admin.html') {
                     <td>${evento.name}</td>
                     <td>${evento.attractions}</td>
                     <td>
-                        <a href="reservas.html" class="btn btn-dark">ver reservas</a>
-                        <a href="editar-evento.html" class="btn btn-secondary">editar</a>
-                        <a href="excluir-evento.html" class="btn btn-danger">excluir</a>
+                        <a href="reservas.html?id=${evento._id}" class="btn btn-dark">ver reservas</a>
+                        <a href="editar-evento.html?id=${evento._id}" class="btn btn-secondary">editar</a>
+                        <a href="excluir-evento.html?id=${evento._id}" class="btn btn-danger">excluir</a>
                     </td>
                 </tr>`
             });
