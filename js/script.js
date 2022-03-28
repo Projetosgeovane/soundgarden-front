@@ -1,5 +1,7 @@
 const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com";
 
+console.log("TESTE GIT");
+
 
 
 const inputNome = document.querySelector('#nome');
