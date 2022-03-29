@@ -77,3 +77,69 @@
 	background-color: #0b5ed7;
 	border-color: #0a58ca;
 }
+
+/* index-carrossel */
+
+.carrousel {
+	margin: 0 auto;
+	max-width: 700px;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+}
+
+.carrousel-item {
+	width: 100%;
+	display: none;
+}
+
+.carrousel-item-img {
+	border-radius: 1.5em;
+}
+
+.carrousel-item-visible {
+	display: block;
+	animation: fadeVisibility 0.5s;
+}
+
+.carrousel-button {
+	font-weight: bold;
+	border: 0;
+	cursor: pointer;
+
+	background-color: #ffff;
+	border-radius: 50%;
+	width: 2.5rem;
+	height: 2.5rem;
+}
+
+.carrousel-button:hover {
+	background-color: #c2185b;
+}
+
+.carrousel-actions {
+	display: flex;
+	justify-content: space-between;
+	position: absolute;
+	top: 50%;
+	left: 3%;
+	right: 3%;
+	transform: translateY(-50%);
+}
+
+.carrousel-img {
+	width: 100%;
+	height: auto;
+	border-radius: 1.5em;
+}
+
+@keyframes fadeVisibility {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
