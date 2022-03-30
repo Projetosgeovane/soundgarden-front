@@ -15,9 +15,7 @@ try {
         evento.preventDefault();
 
         const dateTime = inputData.value;
-        const [day, month, yearTime] = dateTime.split('/');
-        let convertedDate = [month, day, yearTime].join('/');
-        convertedDate = new Date(convertedDate).toISOString();
+        convertedDate = new Date(dateTime).toISOString();
 
         const newEvento = {
             name: inputNome.value,
@@ -38,13 +36,14 @@ try {
 
         const resultado = await fetch(`${BASE_URL}/events`, options)
 
-        const conteudoResultado = await resultado.json(); // converter para json
-        console.log(conteudoResultado); //imprimir dados no console  
+        const conteudoResultado = await resultado.json();
+        console.log(conteudoResultado); 
         alert("Evento cadastrado com sucesso!")
+        window.location.pathname = "/admin.html"
     }
-} catch{
+} catch {
     alert("Erro ao cadastrar evento!");
-    
+
 }
 
 
