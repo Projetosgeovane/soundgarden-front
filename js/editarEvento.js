@@ -41,9 +41,8 @@ const updateApi = async (data) => {
 }
 
 const convertDateTime = (dateTime) => {
-    const [day, month, yearTime] = dateTime.split('/');
-    let convertDate = [month, day, yearTime].join('/');
-    convertDate = new Date(convertDate);
+    
+    convertDate = new Date(dateTime);
     return convertDate.toISOString();
 }
 
@@ -68,7 +67,7 @@ form.onsubmit = async (evento) => {
         alert('Evento atualizado com sucesso!')
         window.location.pathname = "/admin.html"
     } catch {
-        console.log('error');
+        console.log('erro');
         alert("Erro ao atualizar evento!")
     }
 
