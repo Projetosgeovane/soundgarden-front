@@ -51,3 +51,41 @@ const exibirReservas = async () => {
 }
 
 exibirReservas();
+
+// modal
+const modal = document.querySelector(".modal");
+const btns = document.querySelectorAll(".modal-botao");
+const span = document.querySelector(".close");
+
+[].forEach.call(btns, function (el) {
+	el.onclick = function () {
+		modal.style.display = "block";
+	};
+});
+span.onclick = function () {
+	modal.style.display = "none";
+};
+window.onclick = function (event) {
+	if (event.target == modal) {
+		modal.style.display = "none";
+	}
+};
+
+const modalDeletar = document.querySelector(".modal-deletar");
+const btnsDeletar = document.querySelectorAll(".btn-danger");
+btnsDeletar.href = "#"
+const btnclose = document.querySelector(".botao-modal-deletar-nao");
+
+[].forEach.call(btnsDeletar, function (el) {
+	el.onclick = function () {
+		modalDeletar.style.display = "block";
+	};
+});
+btnclose.onclick = function () {
+	modalDeletar.style.display = "none";
+};
+window.onclick = function (event) {
+	if (event.target == modalDeletar) {
+		modalDeletar.style.display = "none";
+	}
+};
