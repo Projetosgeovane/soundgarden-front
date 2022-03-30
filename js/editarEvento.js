@@ -67,7 +67,7 @@ form.onsubmit = async (evento) => {
         alert('Evento atualizado com sucesso!')
         window.location.pathname = "/admin.html"
     } catch {
-        console.log('erro');
+        // console.log('erro');
         alert("Erro ao atualizar evento!")
     }
 
@@ -76,13 +76,11 @@ form.onsubmit = async (evento) => {
 const buscarDados = async () => {
     const conteudorequisicao = await buscarApi();
 
-    const date = new Date(conteudorequisicao.scheduled);
-
     inputNome.value = conteudorequisicao.name;
     inputBanner.value = conteudorequisicao.poster;
     inputAtracoes.value = conteudorequisicao.attractions;
     inputDescricao.value = conteudorequisicao.description;
-    inputData.value = date.toLocaleString();
+    inputData.value = conteudorequisicao.scheduled.slice(0,16);
     inputLotacao.value = conteudorequisicao.number_tickets;
 
 }
