@@ -1,0 +1,195 @@
+#painel-adm {
+    position: relative !important;
+    /* position: fixed!important; */
+    min-width: 206px !important;
+    max-width: 25% !important;
+    transition: all 1s;
+
+}
+
+#painel-adm nav {
+    margin-top: 50px;
+    position: absolute !important;
+    /* width: -500px !important; */
+    width: 90%;
+    box-sizing: border-box !important;
+
+}
+
+#painel-adm nav a:hover:not(.active, .text-decoration-none) {
+    background-color: rgba(0, 0, 0, 0.2);
+
+}
+
+main {
+    width: 75% !important;
+
+    /* display: fixed!important; */
+}
+
+#button-painel-adm {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    width: 50px;
+    margin-top: 10px;
+}
+
+#button-painel-adm img {
+    width: 50px !important;
+}
+
+#input-menu {
+    display: none;
+}
+
+#input-menu:checked~#painel-adm {
+    transform: translateX(-300px) !important;
+    /* background-color: red!important; */
+}
+
+.img-responsive {
+    min-width: 80px;
+}
+
+
+/* MEDIAS COMEÇAM AQUI  */
+@media screen and (max-width: 1663px) {
+
+    #form-excluir-evento div {
+        max-width: 577px;
+        min-width: 564px;
+    }
+
+    #lista-eventos tr td .btn {
+        margin: 10px auto !important;
+        text-align: center !important;
+        width: 90%;
+    }
+
+    aside nav a {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width: 910px) {
+
+    #form-excluir-evento div {
+        min-width: 280px;
+    }
+
+    #form-excluir-evento {
+        width: 70%;
+    }
+
+    #lista-eventos tr td .btn {
+        width: 100%;
+    }
+
+    #painel-adm {
+        position: fixed !important;
+    }
+
+    main {
+        width: 100% !important;
+        /* margin-left: 100px */
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    #atracoes-evento,
+    #atracoes-evento-th {
+        display: none;
+    }
+
+    table {
+        max-width: 100%;
+        background-color: transparent;
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .table {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .table th,
+    .table td {
+        font-size: 16px;
+        padding: 8px 15px;
+        line-height: 20px;
+        text-align: left;
+        vertical-align: middle;
+
+    }
+
+    .table thead th {
+
+        vertical-align: bottom;
+    }
+
+    .table .t-small {
+        width: 5%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    #form-excluir-evento div {
+        min-width: 250px;
+    }
+
+    .p-5 {
+        padding: 10% 5% !important;
+    }
+
+    .table td {
+        font-size: 12px;
+        padding: 8px 0px;
+        line-height: 20px;
+        text-align: left;
+        vertical-align: middle;
+
+    }
+
+    #atracoes-evento {
+        display: block;
+    }
+
+    table thead {
+        display: none;
+    }
+
+    table tr {
+        border-bottom: 2px solid black;
+        margin: 50px 0px;
+        box-sizing: border-box;
+
+    }
+
+    table td {
+        text-align: center !important;
+        border: 0;
+    }
+
+    table td:not(:first-child) {
+        display: block;
+    }
+
+    #lista-eventos tr td .btn {
+        margin: 10px 0px !important;
+        text-align: center !important;
+        width: 50%;
+    }
+
+    main {
+        width: 100% !important;
+        margin: 0px 0px !important;
+        padding: 16px 0px!important;
+    }
+
+}

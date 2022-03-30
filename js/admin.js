@@ -58,7 +58,7 @@ const exibirEvento = async () => {
                     <th scope="row">${index +1}</th>
                     <td>${data}<br/>${hora} </td>
                     <td>${evento.name}</td>
-                    <td>${evento.attractions}</td>
+                    <td id="atracoes-evento">${evento.attractions}</td>
                     <td>
                         <a href="reservas.html?id=${evento._id}" class="btn btn-dark">ver reservas</a>
                         <a href="editar-evento.html?id=${evento._id}" class="btn btn-secondary">editar</a>
