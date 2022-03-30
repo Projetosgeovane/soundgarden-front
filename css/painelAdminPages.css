@@ -55,7 +55,7 @@ main {
 
 /* MEDIAS COMEÇAM AQUI  */
 @media screen and (max-width: 1663px) {
-
+    
     #form-excluir-evento div {
         max-width: 577px;
         min-width: 564px;
