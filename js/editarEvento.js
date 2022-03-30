@@ -27,6 +27,9 @@ const buscarApi = async () => {
     return conteudorequisicao
 }
 
+
+
+
 const updateApi = async (data) => {
     const options = {
         method: "PUT",
