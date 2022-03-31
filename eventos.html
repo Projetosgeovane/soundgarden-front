@@ -12,6 +12,7 @@
 			crossorigin="anonymous"
 		/>
 		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style_gabi.css">
 	</head>
 
 	<body>
@@ -30,75 +31,43 @@
 					<h2>Todos os Eventos</h2>
 				</div>
 				<div
-					class="container d-flex justify-content-center align-items-center flex-wrap"
-				>
-					<article class="evento card p-5 m-3">
-						<h2>nome do evento - 05/03/2022</h2>
-						<h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-							aperiam sunt quo similique, dolorum consectetur inventore ipsam,
-							officiis neque natus eius harum alias quidem. Possimus nobis in
-							inventore tenetur asperiores.
-						</p>
-						<a href="#" class="btn btn-primary">reservar ingresso</a>
-					</article>
-					<article class="evento card p-5 m-3">
-						<h2>nome do evento - 05/03/2022</h2>
-						<h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-							aperiam sunt quo similique, dolorum consectetur inventore ipsam,
-							officiis neque natus eius harum alias quidem. Possimus nobis in
-							inventore tenetur asperiores.
-						</p>
-						<a href="#" class="btn btn-primary">reservar ingresso</a>
-					</article>
-					<article class="evento card p-5 m-3">
-						<h2>nome do evento - 05/03/2022</h2>
-						<h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-							aperiam sunt quo similique, dolorum consectetur inventore ipsam,
-							officiis neque natus eius harum alias quidem. Possimus nobis in
-							inventore tenetur asperiores.
-						</p>
-						<a href="#" class="btn btn-primary">reservar ingresso</a>
-					</article>
-					<article class="evento card p-5 m-3">
-						<h2>nome do evento - 05/03/2022</h2>
-						<h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-							aperiam sunt quo similique, dolorum consectetur inventore ipsam,
-							officiis neque natus eius harum alias quidem. Possimus nobis in
-							inventore tenetur asperiores.
-						</p>
-						<a href="#" class="btn btn-primary">reservar ingresso</a>
-					</article>
-					<article class="evento card p-5 m-3">
-						<h2>nome do evento - 05/03/2022</h2>
-						<h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-							aperiam sunt quo similique, dolorum consectetur inventore ipsam,
-							officiis neque natus eius harum alias quidem. Possimus nobis in
-							inventore tenetur asperiores.
-						</p>
-						<a href="#" class="btn btn-primary">reservar ingresso</a>
-					</article>
-					<article class="evento card p-5 m-3">
-						<h2>nome do evento - 05/03/2022</h2>
-						<h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-							aperiam sunt quo similique, dolorum consectetur inventore ipsam,
-							officiis neque natus eius harum alias quidem. Possimus nobis in
-							inventore tenetur asperiores.
-						</p>
-						<a href="#" class="btn btn-primary">reservar ingresso</a>
-					</article>
+					id="container-eventos"
+					class="container d-flex justify-content-center align-items-center"
+				></div>
+
+				<!-- modal -->
+				<div class="modal">
+					<div class="conteudo">
+						<div class="modal-header">
+							<h3>Reservar Ingresso</h3>
+							<span class="close">&times</span>
+						</div>
+						<div class="modal-body">
+							<form id="formulario-reserva">
+								<label for="nome">Nome</label>
+								<input
+									type="text"
+									id="nome-reserva"
+									placeholder="ex: José da Silva"
+								/>
+								<label for="email">E-Mail</label>
+								<input
+									type="email-reserva"
+									id="email"
+									placeholder="ex: josesilva@gmail.com"
+								/>
+								<label for="num-ingressos">Nº de Ingressos</label>
+								<input
+									type="text"
+									id="num-ingressos-reserva"
+									placeholder="ex: 3"
+								/>
+								<input type="submit" value="enviar" id="botao-enviar" />
+							</form>
+						</div>
+					</div>
 				</div>
+
 			</section>
 			<section
 				class="full d-flex justify-content-center align-items-center"
@@ -159,5 +128,7 @@
 				</nav>
 			</div>
 		</footer>
+
+		<script src="js/eventos.js"></script>
 	</body>
 </html>

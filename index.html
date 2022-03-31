@@ -13,6 +13,7 @@
 		/>
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style_gabi.css" />
+		<script src="https://kit.fontawesome.com/19d04cb670.js" crossorigin="anonymous"></script>
 	</head>
 
 	<body>
@@ -30,6 +31,7 @@
 				class="full d-flex justify-content-center align-items-center"
 				style="background-color: #f8bbd0; color: #fff"
 			>
+				<!-- carrossel -->
 				<div class="carrousel">
 					<div class="carrousel-item carrousel-item-visible">
 						<img
@@ -45,19 +47,17 @@
 					</div>
 					<div class="carrousel-item">
 						<img
-							src="https://www.praiagrande.sp.gov.br/arquivos/foto/54854.jpg"
+							src="https://assets.b9.com.br/wp-content/uploads/2021/03/shows-ao-vivo-1280x677.jpg"
 							class="carrousel-img"
 						/>
 					</div>
 					<div class="carrousel-actions">
-						<button
-							class="carrousel-button"
-							id="carrousel-button-prev"
-						></button>
-						<button
-							class="carrousel-button"
-							id="carrousel-button-next"
-						></button>
+						<button class="carrousel-button" id="carrousel-button-prev">
+							<i class="fa-solid fa-angle-left"></i>
+						</button>
+						<button class="carrousel-button" id="carrousel-button-next">
+							<i class="fa-solid fa-angle-right"></i>
+						</button>
 					</div>
 				</div>
 			</section>
@@ -66,7 +66,7 @@
 					<h2>Próximos eventos</h2>
 				</div>
 				<div
-					id="container-eventos"
+					id="container-eventos-index"
 					class="container d-flex justify-content-center align-items-center"
 				></div>
 
@@ -97,7 +97,7 @@
 									id="num-ingressos-reserva"
 									placeholder="ex: 3"
 								/>
-								<input type="submit" value="enviar" id="botao-enviar" />
+								<input type="submit" value="enviar" id="botao-enviar" id-evento />
 							</form>
 						</div>
 					</div>

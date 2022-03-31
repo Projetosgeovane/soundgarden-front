@@ -1,4 +1,4 @@
-/* index - modal */
+/* modal - reservar e deletar reserva */
 
 .modal, .modal-deletar{
 	display: none;
@@ -116,12 +116,23 @@
 	border-color: #0a58ca;
 }
 
-/* index-carrossel */
+
+/* index.html */
+
+.evento.card.p-5.m-3 {
+	height: 450px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+}
+
+/* index - carrossel */
 
 .carrousel {
 	margin: 0 auto;
-	max-width: 700px;
-	height: 100vh;
+	width: 70%;
+	/* height: 100vh; */
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -162,8 +173,8 @@
 	justify-content: space-between;
 	position: absolute;
 	top: 50%;
-	left: 3%;
-	right: 3%;
+	left: -10%;
+	right: -10%;
 	transform: translateY(-50%);
 }
 
@@ -182,3 +193,12 @@
 	}
 }
 
+
+/* eventos.html */
+
+#container-eventos {
+	display: flex;
+	flex-wrap: wrap;
+	/* max-width: 80%!important; */
+	/* margin: auto 20px!important; */
+}
