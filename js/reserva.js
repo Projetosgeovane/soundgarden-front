@@ -33,10 +33,10 @@ const exibirReservas = async () => {
 
             conteudoResultado.innerHTML +=
                 `<tr>
-                    <th scope="row">${index +1}</th>
-                    <td>${reserva.owner_name}</td>
-                    <td>${reserva.owner_email}</td>
-                    <td>${reserva.number_tickets}</td>
+                    <th scope="row" id="ref-reserva">${index +1}</th>
+                    <td id="reserva-th" >${reserva.owner_name}</td>
+                    <td id="reserva-th" >${reserva.owner_email}</td>
+                    <td id="reserva-th" >${reserva.number_tickets}</td>
                     <td>
                         <a href="excluir-reserva.html?id=${reserva._id}" class="btn btn-danger">excluir</a>
                     </td>
