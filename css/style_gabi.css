@@ -1,7 +1,7 @@
 /* index - modal */
 
-.modal{
-	display: none;
+.modal, .modal-deletar{
+	/* display: none; */
 	position: fixed;
 	z-index: 1; /* Sit on top */
 	left: 0;
@@ -14,7 +14,7 @@
 	transition: all 0.35s ease-in;
 }
 
-.conteudo{
+.conteudo, .conteudo-modal-deletar{
 	background-color: #fefefe;
 	margin: 15% auto;
 	border-radius: 20px;
@@ -24,11 +24,11 @@
 	cursor: default;
 }
 
-/* .conteudo-modal-deletar {
+.conteudo-modal-deletar {
 	font-size: 23px;
-} */
+}
 
-.modal-header{
+.modal-header, .modal-header-deletar, .modal-footer-deletar{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -36,13 +36,13 @@
 	padding: 2% 5%;
 }
 
-/* .modal-header-deletar {
+.modal-header-deletar {
 	justify-content: center;
 	font-size: 35px;
 	font-weight: bold;
-} */
+} 
 
-/* .modal-header-deletar h3 {
+.modal-header-deletar h3 {
 	font-size: 35px;
 	font-weight: bold;
 }
@@ -68,9 +68,9 @@
 .botao-modal-deletar-sim, .botao-modal-deletar-nao {
 	font-size: 20px;
 	padding: 0.5% 5%;
-} */
+}
 
-.modal-body{
+.modal-body, .modal-body-deletar{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
