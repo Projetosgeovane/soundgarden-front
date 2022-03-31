@@ -1,7 +1,7 @@
 const urlParametros = new URLSearchParams(window.location.search);
 const idEvento = urlParametros.get('id');
 const idReserva = urlParametros.get('idReserva');
-const formDeletarReserva = document.querySelector('.botao-modal-deletar-sim');
+const formDeletarReserva = document.querySelector('#formDeletarReserva');
 const BASE_URL = 'https://xp41-soundgarden-api.herokuapp.com';
 const conteudoResultado = document.querySelector('#lista-eventos');
 const inputIngresso = document.querySelector('#ingressos');
@@ -31,7 +31,7 @@ const retornarIngressos = async () => {
 }
 
 
-formDeletarReserva.onclick = async (event) => {
+formDeletarReserva.onsubmit = async (event) => {
     try {
         event.preventDefault();
 
