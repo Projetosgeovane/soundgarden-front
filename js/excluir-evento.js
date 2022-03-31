@@ -15,7 +15,7 @@ const deletarEvento = async () => {
     try {
         await fetch(`${BASE_URL}/events/${idEvento}`, requestOptions)
         alert("Evento excluído com sucesso!")
-        window.location.pathname = 'admin.html'       
+        window.location.href = "admin.html"       
 
     } catch {
         alert("ID Não encontrado!")

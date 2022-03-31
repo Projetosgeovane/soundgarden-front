@@ -38,7 +38,7 @@ const exibirReservas = async () => {
                     <td id="reserva-th" >${reserva.owner_email}</td>
                     <td id="reserva-th" >${reserva.number_tickets}</td>
                     <td>
-                        <a href="excluir-reserva.html${window.location.search}&idReserva=${reserva._id}" class="btn btn-danger">excluir</a>
+                        <a href="reservas.html?id=${idEvento}&idReserva=${reserva._id}" class="btn btn-danger">excluir</a>
                     </td>
                 </tr>`
         });

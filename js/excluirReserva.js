@@ -1,7 +1,7 @@
 const urlParametros = new URLSearchParams(window.location.search);
 const idEvento = urlParametros.get('id');
 const idReserva = urlParametros.get('idReserva');
-const formDeletarReserva = document.querySelector('form');
+const formDeletarReserva = document.querySelector('.botao-modal-deletar-sim');
 const BASE_URL = 'https://xp41-soundgarden-api.herokuapp.com';
 const conteudoResultado = document.querySelector('#lista-eventos');
 const inputIngresso = document.querySelector('#ingressos');
@@ -20,7 +20,7 @@ const retornarIngressos = async () => {
 
 
     const reservas = await (await fetch(`${BASE_URL}/bookings/event/${idEvento}`, requestOptions)).json()
-    console.log(reservas);
+    // console.log(reservas);
 
     reservas.forEach((evento) => {
 
@@ -31,7 +31,7 @@ const retornarIngressos = async () => {
 }
 
 
-formDeletarReserva.onsubmit = async (event) => {
+formDeletarReserva.onclick = async (event) => {
     try {
         event.preventDefault();
 
@@ -44,8 +44,9 @@ formDeletarReserva.onsubmit = async (event) => {
         };
 
         const reserva = await (await fetch(`${BASE_URL}/bookings/${idReserva}`, requestOptionsGet)).json()
+        const ingressosDisponiveis = reserva.number_tickets + ingressosTotal;
         
-        const ingressosReserva = reserva.number_tickets;
+
 
         const requestOptions = {
             method: 'DELETE',
@@ -56,20 +57,17 @@ formDeletarReserva.onsubmit = async (event) => {
         };
 
         await fetch(`${BASE_URL}/bookings/${idReserva}`, requestOptions)
-
-        ingressosTotal += ingressosReserva;
-        console.log(ingressosTotal)
-
-
-
-
-
-
+       
         const data = {
-            
-            number_tickets: ingressosTotal
-
+            name: reserva.event.name,
+            poster: reserva.event.poster,
+            attractions: reserva.event.attractions,
+            description: reserva.event.description,
+            scheduled: reserva.event.scheduled,
+            number_tickets: Number(ingressosDisponiveis),
         }
+        // console.log(data);
+        
 
         const options = {
             method: "PUT",
@@ -78,9 +76,20 @@ formDeletarReserva.onsubmit = async (event) => {
                 "Content-Type": "application/json"
             }
         };
+        // console.log(options)
         const requisicao = await fetch(`${BASE_URL}/events/${idEvento}`, options)
         const conteudorequisicao = await requisicao.json(data)
-        console.log(conteudorequisicao)
+        // console.log(conteudorequisicao)
+
+
+
+
+
+
+
+
+
+
 
         alert("Evento excluído com sucesso!")
         location.replace(document.referrer);

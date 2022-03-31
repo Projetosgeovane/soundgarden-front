@@ -68,7 +68,7 @@ form.onsubmit = async (evento) => {
 
 
         alert('Evento atualizado com sucesso!')
-        window.location.pathname = "/admin.html"
+        window.location.href = "admin.html"
     } catch {
         // console.log('erro');
         alert("Erro ao atualizar evento!")
