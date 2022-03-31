@@ -139,9 +139,14 @@ formReserva.onsubmit = async (event) => {
 
 		const resposta = await fetch(`${BASE_URL}/bookings`, options);
 		const reserva = await resposta.json();
-		console.log(novaReserva);
-		formReserva.reset();
-		alert("Uhuul! Seu ingresso foi reservado!");
+		console.log(reserva);
+
+		if(resposta.ok) {
+			formReserva.reset();
+			alert("Uhuul! Seu ingresso foi reservado!");
+		} else {
+			alert("Ups, parece que tivemos um erro na sua reserva!\nTente novamente :)");
+		}
 	} catch (error) {
 		alert(
 			"Ups, parece que tivemos um erro na sua reserva!\nTente novamente :)"
