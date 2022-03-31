@@ -52,6 +52,44 @@ const exibirReservas = async () => {
 
 exibirReservas();
 
+// reservar ingressos
+const inputNomeReserva = document.querySelector("#nome-reserva");
+const inputEmailReserva = document.querySelector("#email");
+const inputIngressosReserva = document.querySelector("#num-ingressos-reserva");
+const formReserva = document.querySelector("#formulario-reserva");
+
+formReserva.onsubmit = async function (event) {
+	event.preventDefault();
+    
+	try {
+		const novaReserva = {
+			owner_name: inputNomeReserva.value,
+			owner_email: inputEmailReserva.value,
+			number_tickets: inputIngressosReserva.value,
+			event_id: idEvento,
+		};
+
+		const options = {
+			method: "POST",
+			body: JSON.stringify(novaReserva),
+			headers: {
+				"Content-Type": "application/json",
+			},
+		};
+
+		const resposta = await fetch(`${BASE_URL}/bookings`, options);
+		const reserva = await resposta.json();
+		console.log(reserva);
+		formReserva.reset();
+        alert("Uhuul! Seu ingresso foi reservado!")
+		document.location.reload(true)
+	} catch (error) {
+		alert(
+			"Ups, parece que tivemos um erro na sua reserva!\nTente novamente :)"
+		);
+	}
+};
+
 // modal
 const modal = document.querySelector(".modal");
 const btns = document.querySelectorAll(".modal-botao");
