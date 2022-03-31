@@ -39,7 +39,7 @@ try {
         const conteudoResultado = await resultado.json();
         console.log(conteudoResultado); 
         alert("Evento cadastrado com sucesso!")
-        window.location.pathname = "/admin.html"
+        window.location.pathname = "/soundgarden-front/admin.html"
     }
 } catch {
     alert("Erro ao cadastrar evento!");
