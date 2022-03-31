@@ -13,7 +13,6 @@
 		/>
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style_gabi.css" />
-
 	</head>
 
 	<body>
@@ -33,17 +32,32 @@
 			>
 				<div class="carrousel">
 					<div class="carrousel-item carrousel-item-visible">
-						<img src="https://www.tenhomaisdiscosqueamigos.com/wp-content/uploads/2021/03/shows-texas-696x392.jpg" class="carrousel-img">
+						<img
+							src="https://www.tenhomaisdiscosqueamigos.com/wp-content/uploads/2021/03/shows-texas-696x392.jpg"
+							class="carrousel-img"
+						/>
 					</div>
 					<div class="carrousel-item">
-						<img src="https://revistacult.uol.com.br/home/wp-content/uploads/2019/10/racionais-divulgacao.png" class="carrousel-img">
+						<img
+							src="https://revistacult.uol.com.br/home/wp-content/uploads/2019/10/racionais-divulgacao.png"
+							class="carrousel-img"
+						/>
 					</div>
 					<div class="carrousel-item">
-						<img src="https://www.praiagrande.sp.gov.br/arquivos/foto/54854.jpg" class="carrousel-img">
+						<img
+							src="https://www.praiagrande.sp.gov.br/arquivos/foto/54854.jpg"
+							class="carrousel-img"
+						/>
 					</div>
 					<div class="carrousel-actions">
-						<button class="carrousel-button" id="carrousel-button-prev"></button>
-						<button class="carrousel-button" id="carrousel-button-next"></button>
+						<button
+							class="carrousel-button"
+							id="carrousel-button-prev"
+						></button>
+						<button
+							class="carrousel-button"
+							id="carrousel-button-next"
+						></button>
 					</div>
 				</div>
 			</section>
@@ -51,65 +65,44 @@
 				<div class="container text-center">
 					<h2>Próximos eventos</h2>
 				</div>
-				<div class="container d-flex justify-content-center align-items-center">
-					
-					<article class="evento card p-5 m-3">
-						<h2>nome do evento - 05/03/2022</h2>
-						<h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-							aperiam sunt quo similique, dolorum consectetur inventore ipsam,
-							officiis neque natus eius harum alias quidem. Possimus nobis in
-							inventore tenetur asperiores.
-						</p>
-						<button class="btn btn-primary modal-botao">reservar ingresso</button>
-					</article>
+				<div
+					id="container-eventos"
+					class="container d-flex justify-content-center align-items-center"
+				></div>
 
-					<article class="evento card p-5 m-3">
-						<h2>nome do evento - 05/03/2022</h2>
-						<h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-							aperiam sunt quo similique, dolorum consectetur inventore ipsam,
-							officiis neque natus eius harum alias quidem. Possimus nobis in
-							inventore tenetur asperiores.
-						</p>
-						<button class="btn btn-primary modal-botao">reservar ingresso</button>
-					</article>
-
-					<article class="evento card p-5 m-3">
-						<h2>nome do evento - 05/03/2022</h2>
-						<h4>Arctic Monkeys, The Kooks, Hiatus Kaiyote</h4>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro
-							aperiam sunt quo similique, dolorum consectetur inventore ipsam,
-							officiis neque natus eius harum alias quidem. Possimus nobis in
-							inventore tenetur asperiores.
-						</p>
-						<button class="btn btn-primary modal-botao">reservar ingresso</button>
-					</article>
-
-					<!-- modal -->
-					<div class="modal">
-						<div class="conteudo">
-							<div class="modal-header">
-								<h3>Reservar Ingresso</h3>
-								<span class="close">&times</span>
-							</div>
-							<div class="modal-body">
-								<form id="formulario-reserva">
-									<label for="nome">Nome</label>
-									<input type="text" id="nome" placeholder="ex: José da Silva">
-									<label for="email">E-Mail</label>
-									<input type="email" id="email" placeholder="ex: josesilva@gmail.com">
-									<label for="num-ingressos">Nº de Ingressos</label>
-									<input type="text" id="num-ingressos" placeholder="ex: 3">
-									<input type="submit" value="enviar" id="botao-enviar">
-								</form>
-							</div>
+				<!-- modal -->
+				<div class="modal">
+					<div class="conteudo">
+						<div class="modal-header">
+							<h3>Reservar Ingresso</h3>
+							<span class="close">&times</span>
+						</div>
+						<div class="modal-body">
+							<form id="formulario-reserva">
+								<label for="nome">Nome</label>
+								<input
+									type="text"
+									id="nome-reserva"
+									placeholder="ex: José da Silva"
+								/>
+								<label for="email">E-Mail</label>
+								<input
+									type="email-reserva"
+									id="email"
+									placeholder="ex: josesilva@gmail.com"
+								/>
+								<label for="num-ingressos">Nº de Ingressos</label>
+								<input
+									type="text"
+									id="num-ingressos-reserva"
+									placeholder="ex: 3"
+								/>
+								<input type="submit" value="enviar" id="botao-enviar" />
+							</form>
 						</div>
 					</div>
 				</div>
+
 				<div class="container text-center">
 					<a href="eventos.html" class="btn btn-secondary"
 						>ver todos os eventos</a
