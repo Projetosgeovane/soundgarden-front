@@ -61,6 +61,13 @@ main {
     min-width: 90px;
 }
 
+.modal-header-deletar{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
 
 /* MEDIAS COMEÇAM AQUI  */
 @media screen and (max-width: 1663px) {
@@ -93,7 +100,7 @@ main {
     }
 
     #form-excluir-evento {
-        width: 70%;
+        width: 100%;
     }
 
     #lista-eventos tr td .btn {
@@ -114,7 +121,13 @@ main {
 @media screen and (max-width: 768px) {
 
     .conteudo, .conteudo-modal-deletar {        
-        min-width: 400px;       
+        min-width: 400px; 
+    }
+
+    .modal-body-deletar p1,
+    .modal-body-deletar p2,
+    .modal-body-deletar p3{        
+        font-size: 20px !important;       
     }
 
     .conteudo input, .conteudo-modal-deletar input {        
@@ -122,7 +135,7 @@ main {
     }
 
     .p-5 {
-        padding: 10% 1% !important;
+        padding: 10% 10% !important;
     }
     h3{
         font-size: 14px!important;
@@ -191,8 +204,19 @@ main {
 
 @media screen and (max-width: 480px) {
 
+    .p-5 {
+        padding: 10% 1% !important;
+    }
+
     .conteudo, .conteudo-modal-deletar {        
         min-width: 270px;       
+    }
+
+    .modal-body-deletar p1,
+    .modal-body-deletar p2,
+    .modal-body-deletar p3,
+    .modal-texto-deletar{        
+        font-size: 16px !important;       
     }
 
     .conteudo input, .conteudo-modal-deletar input {        
