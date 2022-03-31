@@ -27,7 +27,8 @@ eventosIndex(18).then((resp) => {
 		const hora = conteudo.scheduled.slice(11, 16);
 
 		cardsEventos.innerHTML += ` <article class="evento card p-5 m-3">
-        <h2 id="nome-evento">${conteudo.name} </br> ${data} </br> ${hora}</h2>
+        <h2 id="nome-evento">${conteudo.name}</h2>
+		<h2 id="data-hora-evento">${data} </br> ${hora}</h2>
         <h4 id="artistas-evento">${conteudo.attractions}</h4>
         <p id="descricao-evento">${conteudo.description}</p>
         <button id-evento="${conteudo._id}" class="btn btn-primary modal-botao">reservar ingresso</button>
@@ -87,7 +88,9 @@ formReserva.onsubmit = async (event) => {
 
 		const resposta = await fetch(`${BASE_URL}/bookings`, options);
 		const reserva = await resposta.json();
-		console.log(novaReserva);
+
+        
+		console.log(reserva);
 		formReserva.reset();
 		alert("Uhuul! Seu ingresso foi reservado!");
 	} catch (error) {
