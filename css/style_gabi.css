@@ -243,6 +243,11 @@
 		padding: 0;
 		max-width: 100%
 	}
+
+	.conteudo {
+		width: 60%;
+	}
+
 }
 
 @media only screen and (max-width:768px) {
@@ -263,6 +268,10 @@
 	}
 
 	.col img {
+		width: 80%;
+	}
+
+	.conteudo {
 		width: 80%;
 	}
 }
@@ -296,6 +305,15 @@
 		padding: 0;
 		max-width: 100%
 	}
+
+	.conteudo {
+		width: 90%;
+	}
+
+	#formulario-reserva {
+		width: 80%;
+	}
+
 }
 
 @media only screen and (max-width:320px) {
@@ -331,5 +349,27 @@
 
 	li a {
 		font-size: 14px;
+	}
+	
+	#formulario-reserva {
+		width: 90%;
+	}
+
+	#formulario-reserva label {
+		font-size: 14px;
+	}
+
+	#formulario-reserva input {
+		margin-bottom: 30px;
+	}
+
+	.modal-header h3{
+		font-size: 20px;
+		font-weight: bold;
+		padding-top: 15px;
+	}
+
+	#botao-enviar {
+		width: 35%;
 	}
 }
