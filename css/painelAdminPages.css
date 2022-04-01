@@ -1,283 +1,265 @@
 #painel-adm {
-    position: relative !important;
-    /* position: fixed!important; */
-    min-width: 206px !important;
-    max-width: 25% !important;
-    transition: all 1s;
-
+	position: relative !important;
+	min-width: 206px !important;
+	max-width: 25% !important;
+	transition: all 1s;
 }
 
 #painel-adm nav {
-    margin-top: 50px;
-    position: absolute !important;
-    /* width: -500px !important; */
-    width: 90%;
-    box-sizing: border-box !important;
-
+	margin-top: 50px;
+	position: absolute !important;
+	width: 90%;
+	box-sizing: border-box !important;
 }
 
 #painel-adm nav a:hover:not(.active, .text-decoration-none) {
-    background-color: rgba(0, 0, 0, 0.2);
-
+	background-color: rgba(0, 0, 0, 0.2);
 }
 
 main {
-    width: 75% !important;
-
-    /* display: fixed!important; */
+	width: 75% !important;
 }
 
 #button-painel-adm {
-    /* display: none; */
-    position: fixed;
-    z-index: 999;
-    width: 50px;
-    margin-top: 10px;
+	position: fixed;
+	z-index: 999;
+	width: 50px;
+	margin-top: 10px;
 }
 
 #button-painel-adm img {
-    width: 50px !important;
+	width: 50px !important;
 }
 
 #input-menu {
-    display: none;
+	display: none;
 }
 
-#input-menu:checked~#painel-adm {
-    transform: translateX(-320px) !important;
-    /* background-color: red!important; */
+#input-menu:checked ~ #painel-adm {
+	transform: translateX(-320px) !important;
 }
 
 .img-responsive {
-    min-width: 80px;
+	min-width: 80px;
 }
 
-#infos-evento-reserva{
-    gap: 50px;
-    margin-bottom: 20px;
+#infos-evento-reserva {
+	gap: 50px;
+	margin-bottom: 20px;
 }
 
-#botao-enviar{
-    min-width: 90px;
+#botao-enviar {
+	min-width: 90px;
 }
 
-.modal-header-deletar{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
+.modal-header-deletar {
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
 }
-
 
 /* MEDIAS COMEÇAM AQUI  */
 @media screen and (max-width: 1663px) {
-    
-    #form-excluir-evento div {
-        max-width: 577px;
-        min-width: 564px;
-    }
+	#form-excluir-evento div {
+		max-width: 577px;
+		min-width: 564px;
+	}
 
-    #lista-eventos tr td .btn {
-        margin: 10px auto !important;
-        text-align: center !important;
-        width: 90%;
-    }
+	#lista-eventos tr td .btn {
+		margin: 10px auto !important;
+		text-align: center !important;
+		width: 90%;
+	}
 
-    aside nav a {
-        width: 100%;
-    }
+	aside nav a {
+		width: 100%;
+	}
 
-    .conteudo, .conteudo-modal-deletar {        
-        min-width: 600px;       
-    }
-
+	.conteudo,
+	.conteudo-modal-deletar {
+		min-width: 600px;
+	}
 }
 
 @media screen and (max-width: 910px) {
+	#form-excluir-evento div {
+		min-width: 280px;
+	}
 
-    #form-excluir-evento div {
-        min-width: 280px;
-    }
+	#form-excluir-evento {
+		width: 100%;
+	}
 
-    #form-excluir-evento {
-        width: 100%;
-    }
+	#lista-eventos tr td .btn {
+		width: 100%;
+	}
 
-    #lista-eventos tr td .btn {
-        width: 100%;
-    }
+	#painel-adm {
+		position: fixed !important;
+	}
 
-    #painel-adm {
-        position: fixed !important;
-    }
-
-    main {
-        width: 100% !important;
-        /* margin-left: 100px */
-    }
-
+	main {
+		width: 100% !important;
+	}
 }
 
 @media screen and (max-width: 768px) {
+	.conteudo,
+	.conteudo-modal-deletar {
+		min-width: 400px;
+	}
 
-    .conteudo, .conteudo-modal-deletar {        
-        min-width: 400px; 
-    }
+	.modal-body-deletar p1,
+	.modal-body-deletar p2,
+	.modal-body-deletar p3 {
+		font-size: 20px !important;
+	}
 
-    .modal-body-deletar p1,
-    .modal-body-deletar p2,
-    .modal-body-deletar p3{        
-        font-size: 20px !important;       
-    }
+	.conteudo input,
+	.conteudo-modal-deletar input {
+		font-size: 14px !important;
+	}
 
-    .conteudo input, .conteudo-modal-deletar input {        
-        font-size: 14px !important;       
-    }
+	.p-5 {
+		padding: 10% 10% !important;
+	}
+	h3 {
+		font-size: 14px !important;
+	}
 
-    .p-5 {
-        padding: 10% 10% !important;
-    }
-    h3{
-        font-size: 14px!important;
-    }
+	h1 {
+		font-size: 22px !important;
+	}
 
-    h1{
-        font-size: 22px!important;
-    }
+	a {
+		font-size: 15px !important;
+	}
 
-    a{
-        font-size: 15px!important;
-    }
+	.modal-header-deletar h3 {
+		font-size: 24px !important;
+	}
 
-    .modal-header-deletar h3{
-        font-size: 24px!important;
-    }
+	.modal-texto-deletar {
+		font-size: 20px !important;
+	}
 
-    .modal-texto-deletar{
-        font-size: 20px!important;
-    }
-    
+	#reserva-th {
+		font-size: 12px !important;
+	}
 
-    #reserva-th{
-        font-size: 12px!important;
-    }
+	#atracoes-evento,
+	#ref-reserva,
+	#atracoes-evento-th {
+		display: none;
+	}
 
-    #atracoes-evento,
-    #ref-reserva,
-    #atracoes-evento-th {
-        display: none;
-    }
+	table {
+		max-width: 100%;
+		background-color: transparent;
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
 
-    table {
-        max-width: 100%;
-        background-color: transparent;
-        border-collapse: collapse;
-        border-spacing: 0;
-    }
+	.table {
+		width: 100%;
+		margin-bottom: 20px;
+	}
 
-    .table {
-        width: 100%;
-        margin-bottom: 20px;
-    }
+	.table th,
+	.table td {
+		font-size: 16px;
+		padding: 8px 5px;
+		line-height: 20px;
+		text-align: left;
+		vertical-align: middle;
+	}
 
-    .table th,
-    .table td {
-        font-size: 16px;
-        padding: 8px 5px;
-        line-height: 20px;
-        text-align: left;
-        vertical-align: middle;
+	.table thead th {
+		vertical-align: bottom;
+	}
 
-    }
-
-    .table thead th {
-
-        vertical-align: bottom;
-    }
-
-    .table .t-small {
-        width: 5%;
-        max-width: 80px!important;
-        padding: 8px 2px!important;
-    }
+	.table .t-small {
+		width: 5%;
+		max-width: 80px !important;
+		padding: 8px 2px !important;
+	}
 }
 
 @media screen and (max-width: 480px) {
+	.p-5 {
+		padding: 10% 1% !important;
+	}
 
-    .p-5 {
-        padding: 10% 1% !important;
-    }
+	.conteudo,
+	.conteudo-modal-deletar {
+		min-width: 270px;
+	}
 
-    .conteudo, .conteudo-modal-deletar {        
-        min-width: 270px;       
-    }
+	.modal-body-deletar p1,
+	.modal-body-deletar p2,
+	.modal-body-deletar p3,
+	.modal-texto-deletar {
+		font-size: 16px !important;
+	}
 
-    .modal-body-deletar p1,
-    .modal-body-deletar p2,
-    .modal-body-deletar p3,
-    .modal-texto-deletar{        
-        font-size: 16px !important;       
-    }
+	.conteudo input,
+	.conteudo-modal-deletar input {
+		font-size: 12px !important;
+	}
 
-    .conteudo input, .conteudo-modal-deletar input {        
-        font-size: 12px !important;       
-    }
+	#form-excluir-evento div {
+		min-width: 250px;
+	}
 
-    #form-excluir-evento div {
-        min-width: 250px;
-    }
+	.p-5 {
+		padding: 10% 5% !important;
+	}
 
-    .p-5 {
-        padding: 10% 5% !important;
-    }
+	.table td {
+		font-size: 12px;
+		padding: 8px 0px;
+		line-height: 20px;
+		text-align: left;
+		vertical-align: middle;
+	}
 
-    .table td {
-        font-size: 12px;
-        padding: 8px 0px;
-        line-height: 20px;
-        text-align: left;
-        vertical-align: middle;
+	#atracoes-evento {
+		display: block;
+	}
 
-    }
+	#ref-reserva {
+		display: table-cell;
+	}
 
-    #atracoes-evento {
-        display: block;
-    }
+	table thead {
+		display: none;
+	}
 
-    #ref-reserva {
-        display: table-cell
-    }
+	table tr {
+		border-bottom: 2px solid black;
+		margin: 50px 0px;
+		box-sizing: border-box;
+	}
 
-    table thead {
-        display: none;
-    }
+	table td {
+		text-align: center !important;
+		border: 0;
+	}
 
-    table tr {
-        border-bottom: 2px solid black;
-        margin: 50px 0px;
-        box-sizing: border-box;
+	table td:not(:first-child) {
+		display: block;
+	}
 
-    }
+	#lista-eventos tr td .btn {
+		margin: 10px 0px !important;
+		text-align: center !important;
+		width: 50%;
+	}
 
-    table td {
-        text-align: center !important;
-        border: 0;
-    }
-
-    table td:not(:first-child) {
-        display: block;
-    }
-
-    #lista-eventos tr td .btn {
-        margin: 10px 0px !important;
-        text-align: center !important;
-        width: 50%;
-    }
-
-    main {
-        width: 100% !important;
-        margin: 0px 0px !important;
-        padding: 16px 0px!important;
-    }
-
+	main {
+		width: 100% !important;
+		margin: 0px 0px !important;
+		padding: 16px 0px !important;
+	}
 }

@@ -1,20 +1,22 @@
 /* modal - reservar e deletar reserva */
 
-.modal, .modal-deletar{
+.modal,
+.modal-deletar {
 	display: none;
 	position: fixed;
-	z-index: 1; /* Sit on top */
+	z-index: 1;
 	left: 0;
 	top: 0;
-	width: 100%; /* Full width */
-	height: 100%; /* Full height */
-	overflow: auto; /* Enable scroll if needed */
-	background-color: rgb(0, 0, 0); /* Fallback color */
-	background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+	width: 100%; 
+	height: 100%; 
+	overflow: auto; 
+	background-color: rgb(0, 0, 0);
+	background-color: rgba(0, 0, 0, 0.4);
 	transition: all 0.35s ease-in;
 }
 
-.conteudo, .conteudo-modal-deletar{
+.conteudo,
+.conteudo-modal-deletar {
 	background-color: #fefefe;
 	margin: 15% auto;
 	border-radius: 20px;
@@ -28,7 +30,9 @@
 	font-size: 23px;
 }
 
-.modal-header, .modal-header-deletar, .modal-footer-deletar{
+.modal-header,
+.modal-header-deletar,
+.modal-footer-deletar {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -40,7 +44,7 @@
 	justify-content: center;
 	font-size: 35px;
 	font-weight: bold;
-} 
+}
 
 .modal-header-deletar h3 {
 	font-size: 35px;
@@ -56,7 +60,6 @@
 	background-color: #fefefe;
 	border: 1px solid #fefefe;
 	border-radius: 5px;
-	
 }
 
 .botao-modal-deletar-sim {
@@ -65,12 +68,14 @@
 	border-radius: 5px;
 }
 
-.botao-modal-deletar-sim, .botao-modal-deletar-nao {
+.botao-modal-deletar-sim,
+.botao-modal-deletar-nao {
 	font-size: 20px;
 	padding: 0.5% 5%;
 }
 
-.modal-body, .modal-body-deletar{
+.modal-body,
+.modal-body-deletar {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -115,7 +120,6 @@
 	background-color: #0b5ed7;
 	border-color: #0a58ca;
 }
-
 
 /* index.html */
 
@@ -193,7 +197,6 @@
 	}
 }
 
-
 /* eventos.html */
 
 #container-eventos {
@@ -211,7 +214,7 @@
 }
 
 /* responsividades */
-@media only screen and (max-width:992px) {
+@media only screen and (max-width: 992px) {
 	.carrousel {
 		width: 80%;
 	}
@@ -241,16 +244,15 @@
 		display: flex;
 		flex-wrap: wrap;
 		padding: 0;
-		max-width: 100%
+		max-width: 100%;
 	}
 
 	.conteudo {
 		width: 60%;
 	}
-
 }
 
-@media only screen and (max-width:768px) {
+@media only screen and (max-width: 768px) {
 	section.full {
 		min-height: 45vh;
 	}
@@ -264,7 +266,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		padding: 0;
-		max-width: 100%
+		max-width: 100%;
 	}
 
 	.col img {
@@ -276,7 +278,7 @@
 	}
 }
 
-@media only screen and (max-width:480px) {
+@media only screen and (max-width: 480px) {
 	section.full {
 		min-height: 35vh;
 	}
@@ -303,7 +305,7 @@
 		display: flex;
 		flex-wrap: wrap;
 		padding: 0;
-		max-width: 100%
+		max-width: 100%;
 	}
 
 	.conteudo {
@@ -313,10 +315,9 @@
 	#formulario-reserva {
 		width: 80%;
 	}
-
 }
 
-@media only screen and (max-width:320px) {
+@media only screen and (max-width: 320px) {
 	header a {
 		display: flex;
 		justify-content: center;
@@ -339,8 +340,8 @@
 		height: 1.5rem;
 	}
 
-	.container.d-flex.justify-content-center.align-items-center a img{
-		width: 100%
+	.container.d-flex.justify-content-center.align-items-center a img {
+		width: 100%;
 	}
 
 	nav ul {
@@ -350,7 +351,7 @@
 	li a {
 		font-size: 14px;
 	}
-	
+
 	#formulario-reserva {
 		width: 90%;
 	}
@@ -363,7 +364,7 @@
 		margin-bottom: 30px;
 	}
 
-	.modal-header h3{
+	.modal-header h3 {
 		font-size: 20px;
 		font-weight: bold;
 		padding-top: 15px;

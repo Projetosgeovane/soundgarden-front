@@ -1,6 +1,5 @@
 const BASE_URL = "https://xp41-soundgarden-api.herokuapp.com";
 
-
 //pegar lista de eventos
 const eventosIndex = async (index) => {
 	try {
@@ -18,8 +17,6 @@ const eventosIndex = async (index) => {
 
 eventosIndex(18).then((resp) => {
 	const cardsEventos = document.querySelector("#container-eventos");
-
-	console.log(resp);
 
 	cardsEventos.innerHTML = "";
 	resp.forEach((conteudo) => {
@@ -42,7 +39,7 @@ eventosIndex(18).then((resp) => {
 	const fecha = document.querySelector(".close");
 	const enviar = document.querySelector("#botao-enviar");
 
-	abre.forEach(el => {
+	abre.forEach((el) => {
 		el.addEventListener("click", () => {
 			modal.style.display = "block";
 			enviar.setAttribute("id-evento", `${el.getAttribute("id-evento")}`);
@@ -56,8 +53,6 @@ eventosIndex(18).then((resp) => {
 			modal.style.display = "none";
 		}
 	};
-
-	
 });
 
 // reservar ingressos
@@ -88,12 +83,13 @@ formReserva.onsubmit = async (event) => {
 
 		const resposta = await fetch(`${BASE_URL}/bookings`, options);
 		const reserva = await resposta.json();
-		console.log(reserva);
-		if(resposta.ok) {
+		if (resposta.ok) {
 			formReserva.reset();
 			alert("Uhuul! Seu ingresso foi reservado!");
 		} else {
-			alert("Ups, parece que tivemos um erro na sua reserva!\nTente novamente :)");
+			alert(
+				"Ups, parece que tivemos um erro na sua reserva!\nTente novamente :)"
+			);
 		}
 	} catch (error) {
 		alert(

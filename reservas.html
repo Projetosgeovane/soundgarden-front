@@ -1,142 +1,167 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Sound Garden - Painel Administrativo</title>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Sound Garden - Painel Administrativo</title>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style_gabi.css" />
+		<link rel="stylesheet" href="css/painelAdminPages.css" />
+	</head>
 
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
-		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
-	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="css/style_gabi.css" />
-	<link rel="stylesheet" href="css/painelAdminPages.css" />
-</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<input type="checkbox" name="Menu" id="input-menu" />
+				<label for="input-menu" id="button-painel-adm">
+					<img src="img/painel-menuADM.png" alt="" />
+				</label>
+				<aside
+					class="d-flex flex-column flex-shrink-0 p-3 bg-light col-2"
+					id="painel-adm"
+				>
+					<nav>
+						<a
+							href="index.html"
+							class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none"
+						>
+							<svg class="bi me-2" width="40" height="32">
+								<use xlink:href="#bootstrap"></use>
+							</svg>
+							<span class="fs-4 px-5">
+								<img
+									src="img/Sound-logo.png"
+									alt="Gama Lounge"
+									class="img-responsive"
+								/>
+							</span>
+						</a>
+						<p class="text-center">painel administrativo</p>
+						<hr />
+						<ul class="nav nav-pills flex-column mb-auto">
+							<li class="nav-item">
+								<a
+									href="admin.html"
+									class="nav-link active"
+									aria-current="page"
+								>
+									Eventos
+								</a>
+							</li>
 
-<body>
-	<div class="container-fluid">
-		<div class="row">
-			<input type="checkbox" name="Menu" id="input-menu">
-			<label for="input-menu" id="button-painel-adm">
-				<img src="img/painel-menuADM.png" alt="">
-			</label>
-			<aside class="d-flex flex-column flex-shrink-0 p-3 bg-light col-2" id="painel-adm">
-				<nav>
-					<a href="index.html"
-						class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
-						<svg class="bi me-2" width="40" height="32">
-							<use xlink:href="#bootstrap"></use>
-						</svg>
-						<span class="fs-4 px-5">
-							<img src="img/Sound-logo.png" alt="Gama Lounge" class="img-responsive">
-						</span>
-					</a>
-					<p class="text-center">painel administrativo</p>
-					<hr>
-					<ul class="nav nav-pills flex-column mb-auto">
-						<li class="nav-item">
-							<a href="admin.html" class="nav-link active" aria-current="page">
-								Eventos
-							</a>
-						</li>
-
-						<li>
-							<a href="#" class="nav-link link-dark">
-								Funcionários
-							</a>
-						</li>
-						<li>
-							<a href="#" class="nav-link link-dark">
-								Usuários
-							</a>
-						</li>
-						<li>
-							<a href="index.html" class="nav-link link-dark">
-								Landing Page
-							</a>
-						</li>
-					</ul>
-					<hr>
-				</nav>
-			</aside>
-			<main class="col-9 p-5">
-				<div class="my-5">
-					<h1 id="nome-evento">Gerenciamento de reservas</h1>
-					<div class="d-flex justify-content-around" id="infos-evento-reserva">
-						<h3 id="data-time-evento"></h3>
-						<h3 id="ingressos-evento"></h3>
-					</div>
-					<button class="btn btn-dark modal-botao">Nova Reserva</button>
-					<!-- modal reserva -->
-					<div class="modal">
-						<div class="conteudo">
-							<div class="modal-header">
-								<h3>Reservar Ingresso</h3>
-								<span class="close">&times</span>
-							</div>
-							<div class="modal-body">
-								<form id="formulario-reserva">
-									<label for="nome">Nome</label>
-									<input type="text" id="nome-reserva" placeholder="ex: José da Silva" />
-									<label for="email">E-Mail</label>
-									<input type="email" id="email" placeholder="ex: josesilva@gmail.com" />
-									<label for="num-ingressos">Nº de Ingressos</label>
-									<input type="text" id="num-ingressos-reserva" placeholder="ex: 3" />
-									<input type="submit" value="enviar" id="botao-enviar" />
-								</form>
+							<li>
+								<a href="#" class="nav-link link-dark"> Funcionários </a>
+							</li>
+							<li>
+								<a href="#" class="nav-link link-dark"> Usuários </a>
+							</li>
+							<li>
+								<a href="index.html" class="nav-link link-dark">
+									Landing Page
+								</a>
+							</li>
+						</ul>
+						<hr />
+					</nav>
+				</aside>
+				<main class="col-9 p-5">
+					<div class="my-5">
+						<h1 id="nome-evento">Gerenciamento de reservas</h1>
+						<div
+							class="d-flex justify-content-around"
+							id="infos-evento-reserva"
+						>
+							<h3 id="data-time-evento"></h3>
+							<h3 id="ingressos-evento"></h3>
+						</div>
+						<button class="btn btn-dark modal-botao">Nova Reserva</button>
+						<!-- modal reserva -->
+						<div class="modal">
+							<div class="conteudo">
+								<div class="modal-header">
+									<h3>Reservar Ingresso</h3>
+									<span class="close">&times</span>
+								</div>
+								<div class="modal-body">
+									<form id="formulario-reserva">
+										<label for="nome">Nome</label>
+										<input
+											type="text"
+											id="nome-reserva"
+											placeholder="ex: José da Silva"
+										/>
+										<label for="email">E-Mail</label>
+										<input
+											type="email"
+											id="email"
+											placeholder="ex: josesilva@gmail.com"
+										/>
+										<label for="num-ingressos">Nº de Ingressos</label>
+										<input
+											type="text"
+											id="num-ingressos-reserva"
+											placeholder="ex: 3"
+										/>
+										<input type="submit" value="enviar" id="botao-enviar" />
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-				<div class="bd-example">
-					<table class="table table-action">
+					<div class="bd-example">
+						<table class="table table-action">
+							<thead>
+								<tr>
+									<th class="t-small" id="atracoes-evento-th">#</th>
+									<th class="t-small">Nome</th>
+									<th class="t-small">E-mail</th>
+									<th class="t-small">Nº de Ingressos</th>
+									<th class="t-small">Ações</th>
+								</tr>
+							</thead>
 
-                        <thead>
-                            <tr>
-                                <th class="t-small" id="atracoes-evento-th">#</th>
-                                <th class="t-small">Nome</th>
-                                <th class="t-small">E-mail</th>
-                                <th class="t-small" >Nº de Ingressos</th>
-                                <th class="t-small">Ações</th>
-                            </tr>
-                        </thead>
-
-                        <tbody id="lista-reservas">
-                            <!-- TEM UMA LISTA DE EVENTOS AQUI -->
-                        </tbody>
-						<!-- modal -->
-						<div class="modal-deletar">
-							<div class="conteudo-modal-deletar">
-								<div class="modal-header-deletar">
-									<h3>ATENÇÃO</h3>
-								</div>
-								<div class="modal-body-deletar">
-									<p1></p1>
-									<p2></p2>
-									<p3></p3>
-									<p class="modal-texto-deletar">
-										Deseja mesmo deletar essa reserva?
-									</p>
-								</div>
-								<div class="modal-footer-deletar">
-									<button class="botao-modal-deletar-nao">Não</button>
-									<button class="botao-modal-deletar-sim">Sim</button>
+							<tbody id="lista-reservas">
+								<!-- TEM UMA LISTA DE EVENTOS AQUI -->
+							</tbody>
+							<!-- modal -->
+							<div class="modal-deletar">
+								<div class="conteudo-modal-deletar">
+									<div class="modal-header-deletar">
+										<h3>ATENÇÃO</h3>
+									</div>
+									<div class="modal-body-deletar">
+										<p1></p1>
+										<p2></p2>
+										<p3></p3>
+										<p class="modal-texto-deletar">
+											Deseja mesmo deletar essa reserva?
+										</p>
+									</div>
+									<div class="modal-footer-deletar">
+										<button class="botao-modal-deletar-nao">Não</button>
+										<button class="botao-modal-deletar-sim">Sim</button>
+									</div>
 								</div>
 							</div>
-						</div>
-					</table>
-				</div>
-			</main>
+						</table>
+					</div>
+				</main>
+			</div>
 		</div>
-	</div>
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-	</script>
-	<script src="js/painelAdminPages.js"></script>
-	<script src="js/reservas.js"></script>
-	
-
-</body>
-
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="js/painelAdminPages.js"></script>
+		<script src="js/reservas.js"></script>
+	</body>
 </html>
