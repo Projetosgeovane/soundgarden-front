@@ -28,7 +28,7 @@ main {
 }
 
 #button-painel-adm {
-    display: none;
+    /* display: none; */
     position: fixed;
     z-index: 999;
     width: 50px;
@@ -44,7 +44,7 @@ main {
 }
 
 #input-menu:checked~#painel-adm {
-    transform: translateX(-300px) !important;
+    transform: translateX(-320px) !important;
     /* background-color: red!important; */
 }
 
